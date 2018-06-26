@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- <button style="display:block;" type="button" name="button">Show</button>
+    <button style="display:block;" type="button" name="button">Hide</button>
+    <button style="display:inline-block;" type="button" name="button">Toggle</button>
+    <car src="images/73.jpg" style="width:500px;" alt=""> -->
+
+    <table border="2" width="500px">
+      <tr>
+        <td> <button class="show" type="button" name="button">Show</button> </td>
+        <td rowspan="3" colspan="2"> <img id="car" src="images/73.jpg" alt=""> </td>
+      </tr>
+      <tr>
+        <td> <button class="hide" type="button" name="button">Hide</button> </td>
+
+      </tr>
+      <tr>
+        <td> <button class="toggle" type="button" name="button">Toggle</button> </td>
+
+      </tr>
+      <tr>
+        <td> <button class="SUP" type="button" name="button">SlideUp</button> </td>
+        <td> <button class="SDN" type="button" name="button">SlideDown</button> </td>
+        <td> <button class="ST" type="button" name="button">SlideToggle</button> </td>
+
+      </tr>
+      <tr>
+        <td> <button class="FIN" type="button" name="button">FadeIn</button> </td>
+        <td> <button class="FOT" type="button" name="button">FadeOut</button> </td>
+        <td> <button class="FT" type="button" name="button">FadeToggle</button> </td>
+
+      </tr>
+    </table>
+    <script src="JQ/jquery-3.3.1.js" charset="utf-8"></script>
+    <script src="JQ/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="JQ/jquery-3.3.1.min.map" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(document).ready(() => {
+        $('.show').on('click', () =>{
+          $('#car').show();
+        });
+        $('.hide').on('click', () =>{
+          $('#car').hide();
+        })
+        $('.toggle').on('click', () =>{
+          $('#car').toggle();
+        })
+
+        $('.SUP').on('dblclick', () =>{
+          $('#car').slideUp();
+        })
+        $('.SDN').on('dblclick', () =>{
+          $('#car').slideDown();
+        })
+        $('.ST').on('dblclick', () =>{
+          $('#car').slideToggle();
+        })
+        $('.FIN').on('mouseenter', () =>{
+          $('#car').fadeIn();
+        })
+        $('.FOT').on('mouseenter', () =>{
+          $('#car').fadeOut();
+        })
+        $('.FT').on('mouseenter', () =>{
+          $('#car').fadeToggle();
+        })
+      });
+    </script>
+  </body>
+</html>
